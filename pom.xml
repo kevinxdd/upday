@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.6.5</version>
+    <relativePath/>
+  </parent>
+
+  <groupId>com.lxyzz</groupId>
+  <artifactId>upday</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <description>天天向上项目</description>
+
+  <modules>
+    <module>application</module>
+    <module>domain</module>
+    <module>interfaces</module>
+    <module>infrastructure</module>
+    <module>start</module>
+    <module>common</module>
+  </modules>
+
+  <properties>
+    <java.version>11</java.version>
+    <hutool.version>5.8.15</hutool.version>
+    <lxyzz.version>1.0.0-SNAPSHOT</lxyzz.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>cn.hutool</groupId>
+        <artifactId>hutool-all</artifactId>
+        <version>${hutool.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.lxyzz</groupId>
+        <artifactId>common</artifactId>
+        <version>${lxyzz.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.lxyzz</groupId>
+        <artifactId>domain</artifactId>
+        <version>${lxyzz.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.lxyzz</groupId>
+        <artifactId>application</artifactId>
+        <version>${lxyzz.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.lxyzz</groupId>
+        <artifactId>interfaces</artifactId>
+        <version>${lxyzz.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.lxyzz</groupId>
+        <artifactId>common</artifactId>
+        <version>${lxyzz.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>

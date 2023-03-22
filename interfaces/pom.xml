@@ -10,26 +10,20 @@
     <relativePath/>
   </parent>
 
-  <artifactId>common</artifactId>
-  <description>共用层</description>
+  <artifactId>interfaces</artifactId>
+  <description>门面层</description>
 
   <dependencies>
+
     <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
+      <groupId>com.lxyzz</groupId>
+      <artifactId>application</artifactId>
     </dependency>
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>cn.hutool</groupId>
-      <artifactId>hutool-all</artifactId>
+      <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
   </dependencies>
+
 </project>
