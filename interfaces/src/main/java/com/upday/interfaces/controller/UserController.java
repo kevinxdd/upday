@@ -2,7 +2,7 @@ package com.upday.interfaces.controller;/**
  * Create by xdd on 2023/3/22.
  */
 
-import com.upday.application.service.UserService;
+import com.upday.application.service.OrderService;
 import lombok.RequiredArgsConstructor;
 
 /**
@@ -11,6 +11,6 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class UserController {
 
-  private final UserService userService;
+  private final OrderService orderService;
 
 }
