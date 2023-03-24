@@ -30,9 +30,7 @@ public class OrderDomainServiceImpl implements OrderDomainService {
   public OrderAggregate buildOrderAggregate(OrderDTO orderDTO) {
 
     // 获取用户信息
-    UserAggregate userAggregate = userRepository.find(
-        UserRepositoryCondition.builder().userId(orderDTO.getUserId())
-            .addressId(orderDTO.getUserAddressId()).build());
+    UserAggregate userAggregate = userRepository.find(orderDTO.getUserId());
 
     // 获取商品信息
     List<GoodsAggregate> goodsAggregateList = orderDTO.getOrderItems().stream()

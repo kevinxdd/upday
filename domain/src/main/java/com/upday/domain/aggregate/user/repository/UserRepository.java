@@ -9,6 +9,8 @@ import com.upday.domain.aggregate.user.UserAggregate;
  */
 public interface UserRepository {
 
+  UserAggregate find(Long userId);
+
   UserAggregate find(UserRepositoryCondition condition);
 
 

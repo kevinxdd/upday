@@ -37,7 +37,6 @@ public class OrderServiceImpl implements OrderService {
     OrderAggregate orderAggregate = orderDomainService.buildOrderAggregate(orderDTO);
     // 锁定库存
     StockAggregate stockAggregate = new StockAggregate();
-
     // 保存
     orderRepository.save(orderAggregate);
     // 发送下单成功事件

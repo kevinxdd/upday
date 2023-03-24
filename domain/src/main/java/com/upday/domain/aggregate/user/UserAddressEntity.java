@@ -3,6 +3,8 @@ package com.upday.domain.aggregate.user;
  * Create by xdd on 2023/3/23.
  */
 
+import com.upday.common.entity.Entity;
+import com.upday.domain.aggregate.user.dto.UserAddressDTO;
 import lombok.Getter;
 
 /**
@@ -11,7 +13,7 @@ import lombok.Getter;
  * @author xdd
  */
 @Getter
-public class UserAddressEntity {
+public class UserAddressEntity extends Entity {
 
   private String addressId;
 
@@ -41,5 +43,22 @@ public class UserAddressEntity {
     this.cityName = cityName;
     this.districtId = districtId;
     this.districtName = districtName;
+  }
+
+  /**
+   *  作废自身
+   */
+  void excision() {
+    super.delete();
+  }
+
+  /**
+   *  变更
+   * @param dto 变更业务数据
+   */
+  void update(UserAddressDTO dto) {
+    this.receiveName = dto.getReceiveName();
+    // ....其他修改省略
+    modify();
   }
 }
