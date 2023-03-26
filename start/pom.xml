@@ -16,7 +16,7 @@
   <dependencies>
     <dependency>
       <groupId>com.lxyzz</groupId>
-      <artifactId>interfaces</artifactId>
+      <artifactId>infrastructure</artifactId>
     </dependency>
   </dependencies>
 

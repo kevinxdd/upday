@@ -23,4 +23,8 @@ public abstract class Entity {
     this.changingStatus = ChangingStatus.UPDATED;
   }
 
+  public ChangingStatus getChangingStatus(){
+    return this.changingStatus;
+  }
+
 }

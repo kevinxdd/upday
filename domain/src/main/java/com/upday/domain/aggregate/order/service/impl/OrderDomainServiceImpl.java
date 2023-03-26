@@ -9,7 +9,6 @@ import com.upday.domain.aggregate.order.dto.OrderDTO;
 import com.upday.domain.aggregate.order.service.OrderDomainService;
 import com.upday.domain.aggregate.user.UserAggregate;
 import com.upday.domain.aggregate.user.repository.UserRepository;
-import com.upday.domain.aggregate.user.repository.UserRepositoryCondition;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
@@ -37,6 +36,7 @@ public class OrderDomainServiceImpl implements OrderDomainService {
         .map(item -> goodsRepository.find(item.getGoodsId())).collect(
             Collectors.toList());
 
-    return null;
+    // build
+    return new OrderAggregate();
   }
 }

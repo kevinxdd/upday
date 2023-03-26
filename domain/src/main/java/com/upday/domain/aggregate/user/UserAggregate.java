@@ -3,8 +3,11 @@ package com.upday.domain.aggregate.user;/**
  */
 
 import cn.hutool.core.collection.CollectionUtil;
+import cn.hutool.extra.spring.SpringUtil;
+import com.upday.common.entity.Entity;
 import com.upday.common.utils.AssertUtil;
 import com.upday.domain.aggregate.user.dto.UserAddressDTO;
+import com.upday.domain.aggregate.user.repository.UserRepository;
 import java.util.List;
 import java.util.Optional;
 import lombok.Getter;
@@ -13,7 +16,7 @@ import lombok.Getter;
  * @author xdd
  */
 @Getter
-public class UserAggregate {
+public class UserAggregate extends Entity {
 
   // 用户id
   private Long userId;
@@ -26,6 +29,7 @@ public class UserAggregate {
 
   // 用户地址
   private List<UserAddressEntity> userAddressList;
+
 
 
   /**
@@ -81,6 +85,8 @@ public class UserAggregate {
     UserAddressEntity address = firstOptional.get();
     address.excision();
   }
+
+
 
 
 
