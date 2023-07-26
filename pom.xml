@@ -64,6 +64,11 @@
         <artifactId>common</artifactId>
         <version>${lxyzz.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.lxyzz</groupId>
+        <artifactId>infrastructure</artifactId>
+        <version>${lxyzz.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
